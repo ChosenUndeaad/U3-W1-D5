@@ -10,8 +10,8 @@ function MyNavbar() {
       <Container fluid>
         <Navbar.Brand href='#home'>
           <img
-            src='../assets/netflix_logo.png'
-            width='30'
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1200px-Netflix_2015_logo.svg.png'
+            width='100'
             height='30'
             className='d-inline-block align-top'
             alt='React Bootstrap logo'
@@ -34,14 +34,20 @@ function MyNavbar() {
           <Dropdown>
             <Dropdown.Toggle
               id='dropdown-basic'
-              className='text-light bg-dark border-dark'
+              className='text-light bg-dark border-dark p-0'
             >
-              User
+              <img
+                src='https://tiermaker.com/images/templates/fnaf-hw-characters-956499/9564991618673258.PNG'
+                width='30'
+                height='30'
+                className='rounded-circle'
+                alt='User Avatar'
+              />
             </Dropdown.Toggle>
             <Dropdown.Menu className='dropdown-menu-end'>
-              <Dropdown.Item href='#action-1'>Edit profile</Dropdown.Item>
-              <Dropdown.Item href='#action-2'>Settings</Dropdown.Item>
-              <Dropdown.Item href='#action-3'>Switch User</Dropdown.Item>
+              <Dropdown.Item href='./UserPage.jsx'>Edit profile</Dropdown.Item>
+              <Dropdown.Item href='#'>Settings</Dropdown.Item>
+              <Dropdown.Item href='#'>Switch User</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Navbar.Collapse>

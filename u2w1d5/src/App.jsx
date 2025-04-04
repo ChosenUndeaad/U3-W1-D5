@@ -5,6 +5,7 @@ import Footer from "./Components/Footer";
 import StarWarsRow from "./Components/StarWarsRow";
 import LotrMovies from "./Components/LotrRow";
 import ScreamMovies from "./Components/ScreamRow";
+import MyUser from "./Components/User";
 
 function App() {
   return (
