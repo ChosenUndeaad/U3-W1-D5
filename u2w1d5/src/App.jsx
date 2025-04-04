@@ -4,7 +4,7 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import StarWarsRow from "./Components/StarWarsRow";
 import LotrMovies from "./Components/LotrRow";
-import ScreamMovies from "../../ScreamRow";
+import ScreamMovies from "./Components/ScreamRow";
 
 function App() {
   return (

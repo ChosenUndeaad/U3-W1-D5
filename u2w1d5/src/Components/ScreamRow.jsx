@@ -36,7 +36,13 @@ class ScreamMovies extends Component {
         <div className='row g-2 m-2'>
           {movies.slice(0, 6).map((movie) => (
             <div key={movie.imdbID} className='col-12 col-md-4 col-lg-2 p-1'>
-              <img src={movie.Poster} alt={movie.Title} className='w-100' />
+              <div className='ratio ratio-16x9'>
+                <img
+                  src={movie.Poster}
+                  alt={movie.Title}
+                  className='w-100 h-100 object-fit-cover'
+                />
+              </div>
             </div>
           ))}
         </div>
