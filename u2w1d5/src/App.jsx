@@ -6,6 +6,7 @@ import StarWarsRow from "./Components/StarWarsRow";
 import LotrMovies from "./Components/LotrRow";
 import ScreamMovies from "./Components/ScreamRow";
 import MyUser from "./Components/User";
+import MySettings from "./Settings";
 
 function App() {
   return (
