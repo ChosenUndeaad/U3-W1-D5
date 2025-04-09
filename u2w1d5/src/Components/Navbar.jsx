@@ -3,12 +3,13 @@ import Dropdown from "react-bootstrap/Dropdown";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom"; // Importa Link da react-router-dom
 
 function MyNavbar() {
   return (
     <Navbar expand='lg' className='bg-dark text-light' data-bs-theme='dark'>
       <Container fluid>
-        <Navbar.Brand href='#home'>
+        <Navbar.Brand as={Link} to='/'>
           <img
             src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1200px-Netflix_2015_logo.svg.png'
             width='100'
@@ -20,13 +21,21 @@ function MyNavbar() {
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='me-auto'>
-            <Nav.Link href='#home'>Home</Nav.Link>
-            <Nav.Link href='#tvshows'>TV Shows</Nav.Link>
-            <Nav.Link href='#movies' className='fw-bold'>
+            <Nav.Link as={Link} to='/'>
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} to='/tv-shows'>
+              TV Shows
+            </Nav.Link>
+            <Nav.Link as={Link} to='/movies'>
               Movies
             </Nav.Link>
-            <Nav.Link href='#recently-added'>Recently Added</Nav.Link>
-            <Nav.Link href='#my-list'>My List</Nav.Link>
+            <Nav.Link as={Link} to='/recently-added'>
+              Recently Added
+            </Nav.Link>
+            <Nav.Link as={Link} to='/my-list'>
+              My List
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
 
@@ -45,7 +54,10 @@ function MyNavbar() {
               />
             </Dropdown.Toggle>
             <Dropdown.Menu className='dropdown-menu-end'>
-              <Dropdown.Item href='./UserPage.jsx'>Edit profile</Dropdown.Item>
+              <Dropdown.Item as={Link} to='/user-page'>
+                Edit profile
+              </Dropdown.Item>{" "}
+              {/* Cambiato href a to */}
               <Dropdown.Item href='#'>Settings</Dropdown.Item>
               <Dropdown.Item href='#'>Switch User</Dropdown.Item>
             </Dropdown.Menu>
